@@ -1,0 +1,55 @@
+<form name="persegi"> 
+
+	Sisi&nbsp; &nbsp; &nbsp;:<input name="yasid1" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: 20%;" type="number" />
+  Luas&nbsp; &nbsp; &nbsp;:<input name="yasid2" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: 20%;" type="number" />
+  Keliling&nbsp; &nbsp; &nbsp;:<input name="yasid3" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: 20%;" type="number" />
+ Nilai persegi&nbsp; &nbsp;:<input disabled="true" name="hasil" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: automatc;" type="number" />
+
+<input onclick="luas()" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: automatc;" type="button" value="luas" />
+  <input onclick="keliling()" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: automatc;" type="button" value="keliling" />
+  <input onclick="diagonal()" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: automatc;" type="button" value="diagonal" />
+  <input onclick="sisi1()" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: automatc;" type="button" value="sisi jika diketahui luas" />
+   <input onclick="sisi2()" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: automatc;" type="button" value="sisi jika diketahui keliling persegi" />
+  <input onclick="reset()" style="border: 2px solid rgb(58, 176, 255); margin-bottom: 10px; margin: 8px 0 solid-blue; overflow: hidden; padding: 10px; width: automatc;" type="button" value="hapus" />
+
+</form>
+
+
+<script type="text/JavaScript">
+		function luas() { 
+          a=eval (persegi.yasid1.value);
+          c=Math.pow(a,2)
+          persegi.hasil.value= c;
+          
+        }
+  		function keliling() { 
+          a=eval (persegi.yasid1.value);
+          c=a*4
+          persegi.hasil.value= c;
+          
+        }
+  		function diagonal() { 
+          a=eval (persegi.yasid1.value);
+          c=Math.sqrt((Math.pow(a,2)+(Math.pow(a,2))))
+          persegi.hasil.value= c;
+          
+        }
+  
+  		function sisi1() { 
+          b=eval (persegi.yasid2.value);
+          c=Math.sqrt(b,2)
+          persegi.hasil.value= c;
+          
+        }
+  		function sisi2() { 
+          d=eval (persegi.yasid3.value);
+          c= d/4
+          persegi.hasil.value= c;
+          
+        }
+  		function resetForm() {
+        document.form1.reset();
+        
+        }  
+  
+</script>
